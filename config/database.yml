@@ -17,6 +17,6 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: <%= File.basename(Rails.root) %>_production
+  database: <%= File.basename(Rails.root) %>
   pool: 5
   host: localhost
