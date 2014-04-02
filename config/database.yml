@@ -1,17 +1,22 @@
 development:
   adapter: postgresql
-  database: watchio_dev
+  encoding: unicode
+  database: <%= File.basename(Rails.root) %>_development
   pool: 5
-  timeout: 5000
+  host: localhost
+
 
 test:
   adapter: postgresql
-  database: watchio_test
+  encoding: unicode
+  database: <%= File.basename(Rails.root) %>_test
   pool: 5
-  timeout: 5000
+  host: localhost
+
 
 production:
   adapter: postgresql
-  database: watchio
+  encoding: unicode
+  database: <%= File.basename(Rails.root) %>_production
   pool: 5
-  timeout: 5000
+  host: localhost
